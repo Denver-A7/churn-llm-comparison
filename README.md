@@ -42,17 +42,34 @@ The input is the Telco Customer Churn CSV stored locally at `data/raw/WA_Fn-UseC
 
 The notebook uses sequential API calls and records response errors. API credits and model availability are controlled by Anthropic and may change; a valid key alone does not guarantee available usage balance.
 
-## Findings (fill in after running the experiments)
+## Findings
 
-- **Baseline test metrics:** accuracy `[TBD]`, precision `[TBD]`, recall `[TBD]`, F1 `[TBD]`.
-- **LLM sample and completion status:** sample size `[TBD]`, valid predictions `[TBD]`, failures `[TBD]`.
-- **LLM test metrics:** accuracy `[TBD]`, precision `[TBD]`, recall `[TBD]`, F1 `[TBD]`.
-- **Baseline/LLM agreement:** `[TBD]`.
-- **Disagreement rate and segment patterns:** `[TBD]`.
-- **Which model was correct more often on disagreements:** `[TBD]`.
-- **Cost-weighted comparison (false negative cost = 5, false positive cost = 1):** `[TBD]`.
-- **Rationale review:** examples where the stated reason was supported by the customer profile `[TBD]`; examples where it was weak, contradicted, or unhelpful `[TBD]`.
-- **Conclusion on substitution:** `[TBD]`.
+**Setup:** Logistic regression (trained, class-balanced) vs. Claude Haiku (zero-shot, no training)
+on the same 194 test customers. Haiku returned a usable answer for 194 of 200 sampled rows;
+6 were excluded because they did not follow the required answer format.
+
+| Measure (same 194 customers) | Logistic regression | Claude Haiku |
+|---|---|---|
+| Accuracy | 0.742 | 0.773 |
+| Precision | 0.525 | 0.569 |
+| Recall | 0.778 | 0.759 |
+| F1 | 0.627 | 0.651 |
+| Missed churners / false alarms | 12 / 38 | 13 / 31 |
+| Cost-weighted score (miss = 5, false alarm = 1) | 0.761 | 0.766 |
+
+**What I found**
+- The models agree on 160 of 194 customers (82.5%). The interesting part is the 34 where they differ.
+- On those 34, Haiku was right 20 times and the baseline 14. A sign test gives p ≈ 0.39, so this is not statistically meaningful.
+- 30 of the 34 disagreements were month-to-month customers. The two-year-contract group had none.
+- Haiku repeatedly treated "no internet service" as a churn risk, which the baseline's coefficients do not support.
+- Both models missed 8 churners who looked stable (long tenure, autopay, add-ons), which is a limit of the data.
+
+**Conclusion:** On this sample a zero-shot LLM performed comparably to a trained model,
+with different failure patterns. Its written reasons are plausible text, not proof of what
+drove the prediction, so they need auditing.
+
+**Limitations:** small sample (194 rows, 54 churners), one run, one prompt, one LLM,
+cost weights are an assumption, and the reasoning review is my own reading..
 
 ## Project layout
 

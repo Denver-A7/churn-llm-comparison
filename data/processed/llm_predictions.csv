@@ -1,0 +1,201 @@
+customerID,actual_churn,llm_predicted,llm_reason
+7054-ENNGU,No,Yes,Month-to-month contracts combined with minimal service adoption (no security or tech support) and a relatively short tenure of 9 months suggest moderate-to-high churn risk.
+1310-QRITU,No,Yes,"Month-to-month contracts combined with lack of support services and moderate tenure suggest elevated churn risk, as the customer has low switching costs and minimal service engagement."
+8347-GDTMP,No,No,"Long tenure (64 months), low monthly cost ($19.45), automatic payment method, and active two-year contract all suggest strong customer stability and low churn risk."
+4283-FUTGF,Yes,Yes,"Month-to-month contracts combined with lack of support services and moderate tenure suggest elevated churn risk, as the customer has low switching costs and minimal service engagement."
+1525-LNLOJ,No,No,"Long tenure (66 months), active contract commitment, and automatic payment method suggest stability and low churn risk despite lacking premium services."
+1574-DYCWE,No,No,"Long tenure (51 months), low monthly cost ($19.95), and active two-year contract suggest strong retention indicators despite limited service features."
+7663-CUXZB,No,No,"Long tenure (59 months), active service features (online security and tech support), and stable payment method suggest customer satisfaction and low churn risk."
+7410-KTVFV,Yes,Yes,"Month-to-month contracts combined with minimal service adoption (no security or tech support) and longer tenure suggest moderate churn risk, as the customer has low switching costs and limited service engagement."
+8190-ZTQFB,No,No,The customer's 41-month tenure and active one-year contract suggest reasonable stability and commitment to the service.
+7181-BQYBV,Yes,,Response did not match required format.
+6319-IEJWJ,Yes,Yes,"Month-to-month contracts combined with lack of support services and moderate tenure suggest elevated churn risk, as the customer has low switching costs and minimal service engagement."
+9788-YTFGE,No,Yes,Month-to-month contracts combined with a short tenure (7 months) and limited service offerings (no internet service) suggest elevated churn risk.
+2077-MPJQO,No,Yes,"Month-to-month contracts combined with relatively short tenure (7 months), lack of support services, and no long-term commitment mechanisms suggest elevated churn risk."
+8089-UZWLX,No,No,"Long tenure (71 months), active contract commitment, and automatic payment method suggest stability and low churn risk despite lacking premium services."
+9013-AQORL,No,No,"Despite the month-to-month contract flexibility, the customer's 48-month tenure and automatic payment setup suggest established loyalty and low friction to staying."
+7404-JLKQG,No,Yes,"The combination of a short tenure (3 months), month-to-month contract flexibility, and lack of support services suggests elevated churn risk."
+5760-FXFVO,No,Yes,"Month-to-month contracts combined with relatively short tenure (6 months) and lack of tech support suggest higher churn risk, as the customer has minimal commitment and may lack adequate support to resolve issues."
+6203-HBZPA,No,No,"Long tenure (52 months), active service features (online security and tech support), stable automatic payment method, and locked-in two-year contract all suggest low churn risk."
+6338-AVWCY,Yes,Yes,"Month-to-month contract combined with short tenure (3 months), lack of support services, and manual payment method suggest higher churn risk."
+7677-SJJJK,No,No,"The customer is mid-contract with automatic payments and a low monthly cost, suggesting stable engagement despite limited service features."
+2129-ALKBS,No,No,"The customer's 40-month tenure suggests reasonable loyalty despite the month-to-month contract, and the low monthly cost indicates minimal financial friction."
+5380-WJKOV,Yes,Yes,"Month-to-month contracts combined with lack of support services (no online security or tech support) are typically associated with higher churn risk, despite the relatively long tenure."
+0015-UOCOJ,No,Yes,"Month-to-month contracts combined with relatively short tenure (7 months) and lack of tech support indicate higher churn risk, as customers have low switching costs and minimal support engagement."
+8224-KDLKN,No,No,"Long tenure (72 months), low monthly cost ($25), automatic payment method, and active contract commitment suggest strong customer stability and low churn risk."
+5702-KVQRD,No,No,"Long tenure (71 months), active service features (online security and tech support), and committed contract suggest strong engagement and low churn risk."
+2325-ZUSFD,Yes,No,"Long tenure (57 months), stable automatic payment method, active service features (online security), and committed contract suggest low churn risk."
+1587-FKLZB,Yes,No,"The customer's 66-month tenure suggests strong loyalty despite the month-to-month contract and lack of premium services, indicating lower churn risk."
+0536-ACXIP,No,No,Long tenure of 72 months combined with active service features (online security) and a two-year contract suggests strong customer retention indicators.
+9755-JHNMN,No,No,"Long tenure (49 months), active service features (online security and tech support), stable automatic payment method, and contractual commitment all suggest low churn risk."
+8988-ECPJR,Yes,Yes,"Month-to-month contracts combined with lack of support services and a relatively long tenure suggest lower engagement and switching barriers, increasing churn risk."
+5495-GPSRW,No,No,"The customer is nearing the end of a two-year contract after 20 months of tenure, suggesting satisfaction and commitment to completing their agreement."
+2070-FNEXE,Yes,Yes,"Month-to-month contracts combined with relatively short tenure (7 months) and lack of tech support indicate higher churn risk, as the customer has low switching costs and minimal support engagement."
+3413-CSSTH,No,No,"The customer's 41-month tenure suggests reasonable loyalty despite the month-to-month contract, and automatic bank transfer payment indicates stable engagement with the service."
+2985-FMWYF,No,Yes,"Month-to-month contracts combined with lack of support services and relatively long tenure suggest moderate churn risk, as the customer has low switching costs and minimal service engagement."
+3594-IVHJZ,No,Yes,Month-to-month contracts combined with very short tenure (2 months) and limited service adoption (no internet service) suggest elevated churn risk.
+0440-UEDAI,No,No,"Long tenure of 53 months with automatic payments and active tech support suggest strong engagement and convenience, outweighing the lack of online security."
+9308-ANMVE,No,No,"The customer has been loyal for 47 months with a stable monthly payment and has adopted security services, suggesting reasonable satisfaction despite the month-to-month contract flexibility."
+5027-YOCXN,No,No,"Long tenure (51 months), stable payment method (automatic credit card), contract commitment, and value-added services (security and tech support) suggest low churn risk."
+3780-YVMFA,No,Yes,Month-to-month contracts combined with relatively short tenure (8 months) and lack of online security suggest lower commitment and potential vulnerability to churn.
+9611-CTWIH,Yes,Yes,"The combination of a short tenure (3 months), month-to-month contract flexibility, and lack of support services suggests elevated churn risk."
+9866-OCCKE,No,No,"Long tenure (72 months), active service features (online security and tech support), and contractual commitment suggest strong engagement and lower churn risk."
+9692-TUSXH,Yes,Yes,Month-to-month contracts combined with lack of tech support suggest lower commitment and potential friction points that increase churn risk.
+4086-ATNFV,No,No,Long tenure of 34 months with active security features and stable monthly payments suggest reasonable satisfaction and commitment to the service.
+4419-UJMUS,No,No,"Long tenure of 69 months and active contract suggest strong customer retention, though lack of online security services may present a minor risk factor."
+2720-FVBQP,No,Yes,Month-to-month contracts with shorter tenure (6 months) and lack of additional services like security or support are associated with higher churn risk.
+0074-HDKDG,No,No,"The customer has been loyal for 25 months with a contract in place, automatic payment method, and security features suggesting engagement with the service."
+6825-UYPFK,Yes,Yes,"Month-to-month contracts combined with lack of support services (no online security or tech support) and moderate tenure suggest elevated churn risk, as the customer has low switching costs and minimal service engagement."
+7854-EKTJL,Yes,Yes,Month-to-month contracts combined with very short tenure (2 months) and minimal service adoption (no internet service) are typically associated with higher churn risk.
+9944-AEXBM,No,No,"Despite the month-to-month contract flexibility, the customer's 32-month tenure and consistent automatic payments suggest reasonable stability and engagement with the service."
+2632-TACXW,No,No,"Long tenure (62 months), low monthly cost, automatic payment method, and active two-year contract all suggest strong customer stability and low churn risk."
+0841-NULXI,Yes,Yes,"The combination of a month-to-month contract, very short tenure (1 month), lack of support services, and no long-term commitment suggests elevated churn risk."
+5186-SAMNZ,Yes,Yes,New customer on month-to-month contract with minimal service features (no security or tech support) shows elevated churn risk typical of early-tenure customers.
+9372-TXXPS,No,No,"Long tenure (60 months), active service features (online security and tech support), stable automatic payment method, and contractual commitment all suggest low churn risk."
+4700-UBQMV,No,No,"The customer has been with the company for 21 months (exceeding their one-year contract), maintains automatic payments, and has adopted security services, suggesting reasonable satisfaction and engagement."
+8591-TKMZH,No,No,"Long tenure (59 months), active service features (online security and tech support), and contractual commitment suggest strong engagement and lower churn risk."
+5566-SOEZD,No,No,"The customer has been loyal for 27 months with automatic payments and security features, suggesting stable engagement and low churn risk."
+2480-SQIOB,No,Yes,"Month-to-month contracts combined with short tenure (4 months), lack of support services, and no long-term commitment mechanisms suggest elevated churn risk."
+2307-FYNNL,No,No,"Long tenure (65 months), active service features (online security and tech support), and committed contract suggest strong engagement and low churn risk."
+1936-CZAKF,No,No,"Long tenure (49 months), stable contract commitment (2 years), and automatic payment method suggest lower churn risk despite lack of premium services."
+9473-CBZOP,No,No,"The customer has been loyal for 28 months with a one-year contract and moderate monthly spend, suggesting reasonable satisfaction and commitment."
+4587-VVTOX,Yes,Yes,"Month-to-month contracts combined with relatively short tenure (6 months), lack of support services, and no long-term commitment typically correlate with higher churn risk."
+9209-NWPGU,No,No,"Long tenure (44 months), active service features (online security and tech support), and stable payment method suggest customer satisfaction and low churn risk."
+8181-YHCMF,No,No,"Long tenure (68 months), active contract commitment, automatic payment method, and tech support adoption suggest strong engagement and low churn risk."
+8212-DJRCH,No,Yes,"Month-to-month contracts combined with relatively short tenure (5 months) and lack of tech support suggest higher churn risk, as the customer has low switching costs and minimal support engagement."
+0958-YHXGP,No,Yes,"Month-to-month contract combined with relatively short tenure (7 months), lack of support services, and payment method suggest lower commitment and engagement levels associated with higher churn risk."
+2659-VXMWZ,Yes,No,Long tenure of 67 months and presence of value-added service (online security) suggest established satisfaction and lower churn risk.
+0899-LIIBW,No,Yes,Month-to-month contracts combined with lack of support services (no online security or tech support) are typically associated with higher churn risk despite the relatively long tenure.
+9746-UGFAC,No,No,"The customer has been loyal for 22 months with automatic payments and a contract in place, suggesting low churn risk despite limited service features."
+5575-TPIZQ,No,No,"The customer has been loyal for 46 months with automatic payments and security services, suggesting reasonable satisfaction despite the flexible month-to-month contract."
+4002-BQWPQ,No,No,"The customer has been loyal for 25 months with automatic payments and valuable add-on services (online security and tech support), suggesting reasonable satisfaction and low churn risk despite the flexible month-to-month contract."
+8699-ASUFO,Yes,Yes,"Month-to-month contract combined with relatively short tenure (7 months), lack of support services, and manual payment method suggest lower commitment and higher churn risk."
+6685-GBWJZ,No,No,"Long tenure (63 months), stable payment method (automatic credit card), active service features (online security and tech support), and committed contract suggest low churn risk."
+2277-DJJDL,No,No,"The customer's 60-month tenure suggests strong loyalty despite the month-to-month contract, indicating they are likely to remain."
+2369-FEVNO,No,,Response did not match required format.
+8714-EUHJO,Yes,Yes,"Month-to-month contracts combined with lack of support services (no online security or tech support) are typically associated with higher churn risk, despite the relatively long tenure."
+0963-ZBDRN,Yes,No,"The customer's 32-month tenure suggests reasonable loyalty despite the month-to-month contract, and active tech support usage indicates engagement with the service."
+1444-VVSGW,Yes,No,"Long tenure (70 months), stable payment method (automatic credit card), active service add-ons (security and support), and committed contract suggest low churn risk."
+5893-PYOLZ,No,No,"Long tenure (56 months), active contract commitment, automatic payment method, and tech support adoption suggest customer stability and engagement."
+7879-CGSFV,No,No,"Long tenure of 55 months and active service features (online security) suggest established loyalty, though the lack of tech support and mailed check payment method present minor risk factors."
+3125-RAHBV,No,No,"The customer has maintained a stable relationship for 22 months with automatic payments and a current contract in place, suggesting reasonable satisfaction and low immediate churn risk."
+1926-QUZNN,No,No,"Long tenure (72 months), low monthly cost ($25.25), automatic payment method, and active two-year contract all suggest strong customer stability and low churn risk."
+2001-MCUUW,No,No,Long tenure of 46 months with active contract and tech support suggests established loyalty and engagement with the service.
+8132-YPVBX,No,Yes,"Month-to-month contracts combined with short tenure (6 months), lack of support services, and manual payment method suggest lower commitment and higher churn risk."
+2452-KDRRH,No,No,"The customer's 67-month tenure suggests strong loyalty despite the month-to-month contract and lack of premium services, indicating lower churn risk."
+6184-DYUOB,No,Yes,Month-to-month contracts combined with very short tenure (3 months) and minimal service engagement (no internet service) suggest elevated churn risk.
+8970-ANWXO,No,No,"The customer has been with the company for 23 months (exceeding their one-year contract), maintains active tech support, and shows stable payment behavior via mailed check, suggesting reasonable retention likelihood."
+5751-USDBL,No,No,"Long tenure (46 months), active service features (online security and tech support), and contractual commitment suggest strong engagement and low churn risk."
+3967-VQOGC,No,No,"Long tenure (67 months), active contract commitment (2 years), and low monthly cost suggest strong retention indicators despite limited service features."
+4962-CHQPW,No,No,Long tenure of 29 months with stable monthly payments and an active one-year contract suggests established loyalty and commitment to the service.
+2665-NPTGL,No,No,"Despite the month-to-month contract flexibility, the customer's 26-month tenure and consistent automatic payments suggest reasonable stability and engagement with the service."
+1751-NCDLI,No,No,"The customer's 46-month tenure suggests reasonable loyalty despite the month-to-month contract and lack of support services, indicating they may be a stable, long-term customer."
+2001-EWBQU,No,No,Long tenure of 60 months and active two-year contract suggest strong customer retention despite lack of premium services.
+6345-FZOQH,No,No,"Long tenure (69 months), low monthly cost ($19.90), and active two-year contract suggest strong customer stability and commitment."
+2041-JIJCI,No,Yes,"Month-to-month contract combined with short tenure (5 months), lack of support services, and no long-term commitment mechanisms suggest elevated churn risk."
+4717-GHADL,No,No,"Long tenure (50 months), active contract commitment (2 years), and tech support adoption suggest customer stability and engagement with the service."
+2692-PFYTJ,No,Yes,"The combination of a month-to-month contract, very short tenure (1 month), lack of internet service limiting available features, and payment by mailed check suggests higher churn risk, as the customer has minimal commitment and engagement with the service."
+2482-CZGBB,Yes,Yes,"Month-to-month contracts combined with relatively short tenure (10 months), lack of support services, and no long-term commitment mechanisms suggest elevated churn risk."
+7250-EQKIY,Yes,Yes,"The combination of a month-to-month contract, very short tenure (1 month), lack of support services, and manual payment method suggests higher churn risk, as the customer has minimal commitment and few service attachments."
+3658-KIBGF,Yes,,Response did not match required format.
+3594-UVONA,Yes,No,"Long tenure (35 months), active service features (online security and tech support), automatic payment method, and annual contract commitment suggest strong engagement and low churn risk."
+6366-XIVKZ,No,Yes,"Month-to-month contracts combined with lack of tech support and longer tenure suggest moderate churn risk, as customers without support services and flexible contract terms are more likely to leave."
+8024-XNAFQ,No,No,"Long tenure (72 months), active service features (online security and tech support), stable automatic payment method, and contractual commitment all suggest low churn risk."
+6365-HITVU,No,No,"Long tenure (71 months), active service features (online security and tech support), stable payment method (automatic credit card), and contractual commitment suggest low churn risk."
+6661-HBGWL,Yes,No,"Despite the month-to-month contract flexibility, the customer's 42-month tenure and consistent automatic payments suggest reasonable stability and engagement with the service."
+9648-BCHKM,No,No,"The customer is locked into a two-year contract with only 6 months remaining, has automatic payments set up, and appears to be a stable, long-term subscriber nearing contract completion."
+1194-SPVSP,No,,Response did not match required format.
+9715-WZCLW,No,No,Long tenure of 71 months with active security services and stable monthly payments suggest established loyalty and engagement with the company.
+8676-TRMJS,Yes,Yes,"Month-to-month contract combined with short tenure (3 months), lack of support services, and manual payment method suggest higher churn risk."
+4302-ZYFEL,No,No,Long tenure of 69 months with automatic payment and active contract suggests strong customer stability and low churn risk.
+9112-WSNPU,No,No,"Despite the month-to-month contract flexibility, the customer's 35-month tenure suggests reasonable satisfaction and established habit, which typically outweighs churn risk factors."
+1741-WTPON,No,No,"Long tenure (56 months), active service features (online security and tech support), and contractual commitment suggest strong engagement and lower churn risk."
+3623-FQBOX,No,No,"The customer has maintained a 21-month tenure at a low monthly cost with a stable payment method, suggesting reasonable satisfaction despite limited service offerings."
+9128-CPXKI,No,No,Long tenure of 59 months and active two-year contract suggest strong commitment despite lacking premium support services.
+9115-YQHGA,No,No,"The customer's 40-month tenure suggests reasonable loyalty despite the month-to-month contract, and the combination of tech support adoption and consistent payment method indicates engagement with the service."
+9588-YRFHY,No,No,"Long tenure (49 months), low monthly cost ($19.90), automatic payment method, and active contract commitment suggest strong retention indicators."
+9465-RWMXL,Yes,Yes,"Month-to-month contracts combined with lack of support services (no online security or tech support) are typically associated with higher churn risk, despite the relatively long tenure."
+6713-OKOMC,No,Yes,"Month-to-month contracts combined with relatively short tenure (10 months) and lack of tech support suggest higher churn risk, as these customers have low switching costs and minimal support engagement."
+4277-BWBML,No,No,"Long tenure (72 months), low monthly cost, automatic payment method, and active contract suggest strong customer stability and low churn risk."
+3422-LYEPQ,Yes,Yes,"The combination of a month-to-month contract, very short tenure (1 month), lack of support services, and no long-term commitment suggests elevated churn risk."
+7606-BPHHN,No,No,"Long tenure (72 months), active contract commitment (2 years), and automatic payment method suggest strong customer stability and low churn risk."
+4701-AHWMW,Yes,No,"The customer's 55-month tenure and automatic payment method suggest stability, though the month-to-month contract and lack of online security present some modest churn risk."
+9637-CDTKZ,No,No,"Long tenure (72 months), active service features (online security and tech support), stable payment method (automatic credit card), and contractual commitment suggest low churn risk."
+7816-VGHTO,No,No,"The customer is locked into a two-year contract and has been with the company for 6 months, suggesting reasonable commitment and stability despite lacking online security services."
+0616-ATFGB,Yes,Yes,"The combination of a month-to-month contract, very short tenure (1 month), lack of support services, and no long-term commitment suggests elevated churn risk."
+9365-CSLBQ,No,No,"Long tenure (71 months), active contract commitment (2 years), and low monthly cost suggest strong customer stability and low churn risk."
+5057-RKGLH,No,No,"The customer is locked into a two-year contract with only 9 months elapsed, which significantly reduces immediate churn risk despite the limited service offerings."
+2190-BCXEC,No,No,"The customer's 40-month tenure and automatic payment setup suggest stability, though the month-to-month contract and lack of online security present some modest churn risk."
+1015-OWJKI,No,,Response did not match required format.
+5542-TBBWB,No,Yes,New customer (1 month tenure) on month-to-month contract with no support services shows elevated churn risk typical of early-stage customers who haven't yet built loyalty.
+2091-MJTFX,Yes,No,"The customer has been loyal for 30 months with automatic payments and tech support, suggesting reasonable satisfaction despite the flexible month-to-month contract."
+5857-XRECV,No,No,"The customer has a one-year contract commitment and automatic payment setup, which are protective factors against churn despite the short tenure."
+7239-HZZCX,Yes,Yes,"Month-to-month contract combined with very short tenure (1 month) and lack of internet service adoption suggests higher churn risk, as the customer has minimal service engagement and low switching costs."
+0471-ARVMX,No,No,Long tenure of 62 months and presence of value-added service (online security) suggest established loyalty and engagement with the company.
+9248-OJYKK,Yes,Yes,New customer (1 month tenure) on month-to-month contract with no support services shows elevated churn risk typical of early-stage customers who haven't yet built loyalty.
+2203-GHNWN,No,Yes,"Month-to-month contracts combined with lack of support services and longer tenure suggest moderate churn risk, as customers without added services and on flexible terms are more likely to leave."
+6497-TILVL,No,Yes,"Month-to-month contracts combined with relatively short tenure (7 months) and lack of tech support suggest higher churn risk, as these customers have low switching costs and minimal support engagement."
+1809-DMJHQ,Yes,Yes,"Month-to-month contract combined with short tenure (5 months), lack of support services, and manual payment method suggest lower commitment and higher churn risk."
+6834-NXDCA,Yes,Yes,Month-to-month contracts combined with minimal service adoption (no security or tech support) and relatively short tenure suggest higher churn risk.
+1494-EJZDW,No,No,"The customer is locked into a two-year contract with only 10 months elapsed, which significantly reduces near-term churn risk."
+3677-IYRBF,Yes,Yes,"The combination of a month-to-month contract, very short tenure (2 months), lack of support services, and low monthly spend suggests elevated churn risk, as this customer has minimal commitment and few service dependencies."
+9777-IQHWP,No,No,"Long tenure (64 months), active service features (online security), automatic payment method, and contractual commitment suggest strong engagement and low churn risk."
+5296-BFCYD,No,No,"Long tenure (46 months), active contract commitment (2 years), and low monthly cost suggest stable engagement with the service."
+4184-VODJZ,No,No,"Long tenure of 63 months and active one-year contract suggest established loyalty, though lack of security/support services presents some risk."
+8058-DMYRU,No,No,"The customer's 54-month tenure suggests strong loyalty despite the month-to-month contract and lack of premium services, indicating lower churn risk."
+3891-PUQOD,Yes,,Response did not match required format.
+4735-BJKOU,No,No,"Long tenure (40 months), active contract commitment (2 years), and low monthly cost suggest stable engagement with the service."
+8741-LQOBK,No,No,"The customer has been loyal for 46 months with automatic payments and active security services, suggesting reasonable engagement and stability despite the flexible month-to-month contract."
+8166-ORCHU,No,No,"Long tenure (33 months), active service features (online security and tech support), and stable payment method suggest customer satisfaction and low churn risk."
+0397-ZXWQF,No,No,"Long tenure (67 months), low monthly cost ($20.50), automatic payment method, and active two-year contract all suggest strong customer stability and low churn risk."
+0581-BXBUB,No,Yes,"Month-to-month contract combined with short tenure (4 months), lack of support services, and no long-term commitment mechanisms suggest elevated churn risk."
+3948-FVVRP,No,Yes,"Month-to-month contracts with shorter tenure (9 months) and payment by mailed check are associated with higher churn risk, and the lack of online security suggests lower service engagement."
+4937-QPZPO,No,No,Long tenure of 61 months and active one-year contract suggest established loyalty despite lacking premium support services.
+4190-MFLUW,Yes,Yes,"Month-to-month contracts combined with relatively short tenure (10 months) and lack of online security suggest moderate churn risk, despite having tech support and automatic payments."
+6527-PZFPV,No,No,"The customer has demonstrated loyalty through 24 months of tenure with automatic payments and a committed one-year contract, suggesting low churn risk despite limited service usage."
+1867-BDVFH,Yes,Yes,"Month-to-month contract combined with 11 months tenure and lack of support services suggests moderate-to-high churn risk, as customers without additional services and on flexible contracts are more likely to leave."
+3339-EAQNV,No,No,Long tenure of 72 months with automatic payments suggests strong loyalty and engagement despite lacking premium services.
+6979-ZNSFF,Yes,Yes,"Month-to-month contracts combined with relatively short tenure (8 months), lack of support services, and no long-term commitment mechanisms suggest elevated churn risk."
+2522-AHJXR,No,No,"The customer has been loyal for 60 months with automatic payments and valuable add-on services (online security and tech support), suggesting strong engagement and low churn risk despite the month-to-month contract flexibility."
+7503-QQRVF,Yes,Yes,"Month-to-month contracts combined with lack of support services and moderate tenure suggest elevated churn risk, as the customer has low switching costs and minimal service engagement."
+3063-QFSZL,Yes,Yes,New customer (1 month tenure) on month-to-month contract with no support services appears to have elevated churn risk.
+7408-OFWXJ,No,No,"Long tenure (72 months), active service features (online security and tech support), stable payment method (automatic credit card), and contractual commitment suggest low churn risk."
+7460-ITWWP,No,No,"The customer's 45-month tenure suggests reasonable loyalty despite the month-to-month contract and lack of support services, indicating they may be a stable, long-term customer."
+0430-IHCDJ,No,Yes,Month-to-month contracts combined with minimal service adoption (no security or tech support add-ons) and moderate tenure suggest elevated churn risk.
+5331-RGMTT,No,No,"The customer's 54-month tenure suggests strong loyalty despite the month-to-month contract and lack of premium services, indicating lower churn risk."
+6711-VTNRE,Yes,No,"The customer's 36-month tenure suggests reasonable loyalty despite the month-to-month contract, and active tech support usage indicates engagement with the service."
+5442-BXVND,No,No,"The customer has maintained a 33-month tenure with low monthly costs and automatic payment setup, suggesting reasonable satisfaction and payment reliability despite the month-to-month contract flexibility."
+3530-VWVGU,No,No,"The customer has maintained a 22-month tenure with low monthly charges and appears to be a stable, long-term subscriber despite the month-to-month contract flexibility."
+3910-MRQOY,No,No,"Long tenure (72 months), low monthly cost, automatic payment method, and active contract suggest strong customer stability and low churn risk."
+2988-PLAHS,No,Yes,Early tenure (3 months) combined with lack of value-added services (no security or tech support) suggests elevated churn risk despite the one-year contract commitment.
+0052-YNYOT,No,No,Long tenure of 67 months and active one-year contract suggest strong customer retention despite low monthly spend.
+4547-LYTDD,Yes,Yes,"Month-to-month contracts combined with lack of support services and moderate tenure suggest elevated churn risk, as the customer has low switching costs and minimal service engagement."
+0327-WFZSY,No,No,"Long tenure of 39 months and active one-year contract suggest established loyalty, though lack of additional services could present some risk."
+7495-OOKFY,Yes,Yes,Month-to-month contracts combined with relatively short tenure (8 months) and lack of value-added services (no security or tech support) suggest elevated churn risk.
+4581-LNWUM,No,Yes,Month-to-month contracts combined with minimal service adoption (no security or tech support) and relatively short tenure suggest higher churn risk.
+2606-RMDHZ,Yes,Yes,"Month-to-month contracts with short tenure (6 months), minimal service adoption (no security or tech support), and low monthly spend suggest higher churn risk."
+4945-RVMTE,No,No,"Despite the month-to-month contract flexibility, the customer's 28-month tenure and consistent automatic payments suggest reasonable stability and engagement with the service."
+6080-TCMYC,No,No,"The customer's 40-month tenure suggests reasonable loyalty despite the month-to-month contract and lack of support services, indicating they may be a stable, price-conscious customer."
+2877-VDUER,No,No,"The customer has been loyal for 35 months with a one-year contract in place, suggesting reasonable retention stability despite lacking online security."
+9565-JSNFM,Yes,No,"Long tenure of 38 months with automatic payment setup suggests established loyalty and low friction, despite lacking premium support services."
+3836-FZSDJ,No,No,"Long tenure (71 months), low monthly cost, automatic payment method, and active two-year contract all suggest strong customer stability and low churn risk."
+7198-GLXTC,Yes,Yes,"The combination of a month-to-month contract, very short tenure (2 months), lack of support services, and no long-term commitment suggests elevated churn risk."
+8779-YIQQA,No,No,"The customer has maintained a stable relationship for 21 months with a locked-in one-year contract and low monthly costs, suggesting reasonable satisfaction and commitment."
+8777-PVYGU,No,No,Long tenure of 52 months and active security service adoption suggest established satisfaction and engagement with the company.
+7056-IMHCC,Yes,No,"The customer's 53-month tenure suggests strong loyalty despite having a flexible month-to-month contract, which outweighs the risk factors of lacking support services."
+3312-UUMZW,No,No,"Despite the month-to-month contract flexibility, the customer's 32-month tenure and consistent automatic payments suggest reasonable stability and engagement with the service."
+3756-VNWDH,No,No,Long tenure of 65 months and active security service adoption suggest strong engagement and satisfaction with the company.
+4489-SNOJF,Yes,No,"The customer has been loyal for 35 months with added services (online security and tech support), suggesting satisfaction despite the flexibility of a month-to-month contract."
+2150-OEGBV,No,No,"The customer has been loyal for 27 months with automatic payments and a contract in place, suggesting low churn risk despite the limited service bundle."
+6559-RAKOZ,No,No,"Long tenure of 49 months and active service features (tech support) suggest established loyalty, though lack of online security could present a minor risk factor."
+2955-BJZHG,Yes,Yes,"Month-to-month contracts combined with lack of support services and moderate tenure suggest elevated churn risk, as the customer has low switching costs and minimal service engagement."
+8985-OOPOS,No,Yes,"The customer is very new (1 month tenure) with a one-year contract, which suggests they may still be in an evaluation period and could be at higher risk of early dissatisfaction and departure."
+8361-LTMKD,Yes,Yes,"Month-to-month contract combined with short tenure (4 months), lack of support services, and manual payment method suggest lower commitment and engagement indicators associated with higher churn risk."
+9339-FIIJL,No,No,"Long tenure (72 months), active contract commitment, automatic payment method, and tech support adoption suggest strong engagement and low churn risk."
+1386-ZIKUV,No,Yes,Month-to-month contracts combined with a short tenure of 7 months and minimal service engagement (no internet service) suggest elevated churn risk.
+9405-GPBBG,No,No,"Long tenure (64 months), active contract commitment (2 years), stable automatic payment method, and tech support adoption suggest customer satisfaction and low churn risk."
+8241-JUIQO,No,No,"Long tenure (61 months), low monthly cost, automatic payment method, and active contract suggest strong customer stability and low churn risk."
+9866-QEVEE,Yes,Yes,Month-to-month contracts combined with lack of support services (no online security or tech support) typically correlate with higher churn risk despite reasonable tenure and automatic payment setup.
+2478-EEWWM,No,No,"The customer's 59-month tenure suggests strong loyalty despite the month-to-month contract and lack of premium services, indicating lower churn risk."
+1522-VVDMG,Yes,Yes,Month-to-month contract combined with relatively short tenure (7 months) and lack of online security suggests lower commitment and engagement with the service.
+6712-OAWRH,Yes,Yes,Month-to-month contracts combined with lack of support services (no online security or tech support) are typically associated with higher churn risk despite the relatively long tenure.

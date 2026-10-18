@@ -1,0 +1,12 @@
+segment_dimension,segment,rows_with_valid_predictions,disagreement_count,disagreement_rate,baseline_correct_on_disagreements,llm_correct_on_disagreements,baseline_correct_pct_of_disagreements,llm_correct_pct_of_disagreements,correct_more_often_on_disagreements
+Contract,Month-to-month,104,30,0.28846153846153844,13,17,0.43333333333333335,0.5666666666666667,LLM
+Contract,One year,40,4,0.1,1,3,0.25,0.75,LLM
+Contract,Two year,50,0,0.0,0,0,,,No disagreements
+tenure_bucket,0-12 months,55,12,0.21818181818181817,8,4,0.6666666666666666,0.3333333333333333,Baseline
+tenure_bucket,13-24 months,26,1,0.038461538461538464,1,0,1.0,0.0,Baseline
+tenure_bucket,25-48 months,46,13,0.2826086956521739,3,10,0.23076923076923078,0.7692307692307693,LLM
+tenure_bucket,49+ months,67,8,0.11940298507462686,2,6,0.25,0.75,LLM
+cost_quartile,Q1,48,6,0.125,4,2,0.6666666666666666,0.3333333333333333,Baseline
+cost_quartile,Q2,48,6,0.125,4,2,0.6666666666666666,0.3333333333333333,Baseline
+cost_quartile,Q3,48,8,0.16666666666666666,2,6,0.25,0.75,LLM
+cost_quartile,Q4,50,14,0.28,4,10,0.2857142857142857,0.7142857142857143,LLM
