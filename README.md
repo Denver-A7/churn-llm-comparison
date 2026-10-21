@@ -2,6 +2,8 @@
 
 A small, reproducible study of customer churn prediction using the Telco Customer Churn dataset. It compares a trained logistic-regression baseline with Claude Haiku used zero-shot on natural-language summaries of customer records.
 
+**In short:** I compared and trained logistic regression model with Claude Haiku (given no training) on 194 telecom customers. They performed about the same (accuracy 0.742 vs. 0.773, not a meaningful gap), but they made different mistakes. The more useful part is where they disagree and whether the AI's written reasons hold up.
+
 ## Problem statement
 
 The project asks whether a zero-shot large language model can substitute for a conventional trained model on a structured prediction task: predict whether a customer will churn (`Yes` or `No`) from the same held-out customer attributes used by the baseline.
@@ -13,6 +15,8 @@ The comparison is not just about which model scores higher. It also asks whether
 The input is the Telco Customer Churn CSV stored locally at `data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv`. The inspected file has 7,043 rows and 21 columns. It includes customer attributes for contract, tenure, services, payment method, and charges; `Churn` is the binary target and `customerID` is an identifier, not a predictive feature.
 
 `TotalCharges` is converted to numeric with invalid/blank values coerced to missing values. The baseline preprocessing pipeline median-imputes numeric features using training data. Raw data is excluded from Git; obtain and place the dataset locally before running the notebooks.
+
+Source: IBM's sample Telco Customer Churn dataset, as published on Kaggle (https://www.kaggle.com/datasets/blastchar/telco-customer-churn). This is a public sample dataset with no real customers.
 
 ## Method
 
@@ -57,11 +61,14 @@ on the same 194 test customers. Haiku returned a usable answer for 194 of 200 sa
 | Missed churners / false alarms | 12 / 38 | 13 / 31 |
 | Cost-weighted score (miss = 5, false alarm = 1) | 0.761 | 0.766 |
 
+Baseline on the full test set(1,409 customers): accuracy (0.737), precision (0.503), recall (0.783), F1 (0.613). The 194 customer table above uses only the customers Haiku also answered, so the two models are compared fairly. The 6 rows Haiku answered in the wrong format have no prediction and are excluded (in `llm_predictions.csv`their `llm_reason`column holds the error message). The optional Sonnet side-sample was not run.
+
 **What I found**
+
 - The models agree on 160 of 194 customers (82.5%). The interesting part is the 34 where they differ.
 - On those 34, Haiku was right 20 times and the baseline 14. A sign test gives p ≈ 0.39, so this is not statistically meaningful.
 - 30 of the 34 disagreements were month-to-month customers. The two-year-contract group had none.
-- Haiku repeatedly treated "no internet service" as a churn risk, which the baseline's coefficients do not support.
+- In 7 of Haiku's written reasons it cited "no internet service" as a sign of churn risk, always together with month-to-month contracts and short tenure. 5 of those 7 customers actually stayed. The baseline's coefficients do not treat "no internet service" as a churn driver.
 - Both models missed 8 churners who looked stable (long tenure, autopay, add-ons), which is a limit of the data.
 
 **Conclusion:** On this sample a zero-shot LLM performed comparably to a trained model,
@@ -69,7 +76,11 @@ with different failure patterns. Its written reasons are plausible text, not pro
 drove the prediction, so they need auditing.
 
 **Limitations:** small sample (194 rows, 54 churners), one run, one prompt, one LLM,
-cost weights are an assumption, and the reasoning review is my own reading..
+cost weights are an assumption, and the reasoning review is my own reading.
+
+## Related work
+
+Describing a table row in plain language so a language can classify it comes from TabLLM (Hegselmann et al., 2023, https://arxiv.org/abs/2210.10723). This project applies a similar row-to-sentence idea to customer churn, compares it with a trained baseline, and examines the model's stated reasons. Further background on what drives telecom churn will be added.
 
 ## Project layout
 
@@ -80,8 +91,6 @@ churn-llm-comparison/
 │   └── raw/             # Local source data (gitignored)
 ├── documentation/       # Project log
 ├── notebooks/           # Inspection, baseline, and LLM experiment notebooks
-├── outputs/             # Additional figures/reports
-├── src/                 # Reusable project code
 ├── .env.example         # Local configuration template
 └── requirements.txt
 ```
