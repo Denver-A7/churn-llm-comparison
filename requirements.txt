@@ -1,8 +1,8 @@
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-jupyter
-anthropic
-python-dotenv
+pandas==2.3.3
+numpy==2.3.5
+scikit-learn==1.8.0
+matplotlib==3.10.6
+seaborn==0.13.2
+jupyter==1.1.1
+anthropic==0.120.0
+python-dotenv==1.2.2
