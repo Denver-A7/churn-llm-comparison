@@ -63,6 +63,8 @@ on the same 194 test customers. Haiku returned a usable answer for 194 of 200 sa
 
 Baseline on the full test set(1,409 customers): accuracy (0.737), precision (0.503), recall (0.783), F1 (0.613). The 194 customer table above uses only the customers Haiku also answered, so the two models are compared fairly. The 6 rows Haiku answered in the wrong format have no prediction and are excluded (in `llm_predictions.csv`their `llm_reason`column holds the error message). The optional Sonnet side-sample was not run.
 
+![Who was right when the two models disagreed](outputs/results_chart.png)
+
 **What I found**
 
 - The models agree on 160 of 194 customers (82.5%). The interesting part is the 34 where they differ.
@@ -91,6 +93,7 @@ churn-llm-comparison/
 │   └── raw/             # Local source data (gitignored)
 ├── documentation/       # Project log
 ├── notebooks/           # Inspection, baseline, and LLM experiment notebooks
+├── outputs/             # Charts used in the README
 ├── .env.example         # Local configuration template
 └── requirements.txt
 ```
