@@ -84,7 +84,32 @@ drove the prediction, so they need auditing.
 
 ## Related work
 
-Describing a table row in plain language so a language can classify it comes from TabLLM (Hegselmann et al., 2023, https://arxiv.org/abs/2210.10723). This project applies a similar row-to-sentence idea to customer churn, compares it with a trained baseline, and examines the model's stated reasons. Further background on what drives telecom churn will be added.
+Describing a table row in plain language so a language can classify it comes from TabLLM (Hegselmann et al., 2023, https://arxiv.org/abs/2210.10723). This project applies a similar row-to-sentence idea to customer churn, compares it with a trained baseline, and examines the model's stated reasons. 
+
+The same IBM Telco dataset was analyzed by Dou (2023), who used linear regression to predict
+a churn score and found that longer tenure and longer contracts were associated with lower
+churn scores, and higher monthly charges with higher ones, which is consistent with the
+patterns in this project. That model explained only about 10% of the variation (R-squared =
+0.098), and the author noted that payment method, tech support and online security were not
+considered. In this project's data, payment method separated customers sharply: 45% of
+electronic-check customers left, against 15% of credit-card autopay customers. A 2024 review
+by Anderson lists contract length, charges, tenure and service quality as common churn
+predictors. A study of Korean mobile customers (Ahn, Han & Lee) reported that call
+quality-related factors influenced churn, which shows that drivers differ by market.
+
+**References**
+- Dou, Y. (2023). Customer Churn Prediction: An Empirical Research of Telecommunications
+Service Provider in the United States. DAML 2023, SciTePress, 509-514.
+https://scitepress.org/PublishedPapers/2023/128020
+- Hegselmann, S. et al. (2023). TabLLM: Few-shot Classification of Tabular Data with Large
+Language Models. https://arxiv.org/abs/2210.10723
+- Ahn, J.-H., Han, S.-P., & Lee, Y.-S. Customer churn analysis: Churn determinants and
+mediation effects of partial defection in the Korean mobile telecommunications service
+industry. Telecommunications Policy, 30(10-11), 552-568.
+https://ideas.repec.org/a/eee/telpol/v30yi10-11p552-568.html
+- Anderson, D. (2024). Predictive Modeling of Customer Churn in Telecommunication Companies
+in USA. Journal of Statistics and Actuarial Research, 8(2).
+https://ideas.repec.org/a/bdu/ojjsar/v8y2024i2id2762.html
 
 ## Project layout
 
