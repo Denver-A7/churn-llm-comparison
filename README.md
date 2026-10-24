@@ -72,13 +72,15 @@ Baseline on the full test set(1,409 customers): accuracy (0.737), precision (0.5
 - 30 of the 34 disagreements were month-to-month customers. The two-year-contract group had none.
 - In 7 of Haiku's written reasons it cited "no internet service" as a sign of churn risk, always together with month-to-month contracts and short tenure. 5 of those 7 customers actually stayed. The baseline's coefficients do not treat "no internet service" as a churn driver.
 - Both models missed 8 churners who looked stable (long tenure, autopay, add-ons), which is a limit of the data.
+- Haiku behaves a lot like a tenure rule. It predicted churn for 91% of customers with 12 months or less (47% actually left) but only 16% of customers with more than 12 months (20% actually left). It was more accurate than the baseline on longer-tenure customers (86% vs 78%) and less accurate on newer ones (56% vs 64%).
+
+**Reasoning review (5 selected examples):** I read five of Haiku's written reasons against the customers' actual records, choosing cases where the two models were right or wrong in different combinations. In all five, the facts Haiku quoted were true. The logic held up in one (a customer with long tenure, tech support and automatic payment). In the other four, the reason was only partly sound: two treated "no internet service" as a churn risk, although in this dataset those customers leave only 7.4% of the time, and two let long tenure outweigh several risk factors (fiber optic, electronic-check payment, high monthly charges). One reason was sensible but the customer left anyway, and one prediction was right for a flawed reason, so a correct prediction does not mean a sound explanation. Five hand-picked examples illustrate patterns but do not represent all 194 customers.
 
 **Conclusion:** On this sample a zero-shot LLM performed comparably to a trained model,
 with different failure patterns. Its written reasons are plausible text, not proof of what
 drove the prediction, so they need auditing.
 
-**Limitations:** small sample (194 rows, 54 churners), one run, one prompt, one LLM,
-cost weights are an assumption, and the reasoning review is my own reading.
+**Limitations:** small sample (194 rows, 54 churners), one run, one prompt, one LLM, cost weights are an assumption, and the reasoning review covers only 5 hand-picked examples that I checked myself against the data, so it is illustrative, not representative
 
 ## Related work
 
