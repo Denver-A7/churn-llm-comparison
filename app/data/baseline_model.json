@@ -1,0 +1,152 @@
+{
+  "model": "LogisticRegression(class_weight='balanced', max_iter=2000, random_state=42)",
+  "split": "train_test_split(test_size=0.2, stratify=Churn, random_state=42)",
+  "positive_class": "Yes",
+  "threshold": 0.5,
+  "intercept": -0.27471482538942005,
+  "numeric": {
+    "tenure": {
+      "median": 29.0,
+      "mean": 32.48509052183174,
+      "scale": 24.56656301538815,
+      "coef": -1.1373349313462946
+    },
+    "MonthlyCharges": {
+      "median": 70.5,
+      "mean": 64.92996095136671,
+      "scale": 30.135430576006627,
+      "coef": -0.6771961820889254
+    },
+    "TotalCharges": {
+      "median": 1398.125,
+      "mean": 2301.3199503017395,
+      "scale": 2277.606686938009,
+      "coef": 0.47217118750278597
+    }
+  },
+  "categorical": {
+    "gender": {
+      "most_frequent": "Male",
+      "coefs": {
+        "Female": -0.10253255792668299,
+        "Male": -0.07040578448196973
+      }
+    },
+    "Partner": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": -0.09573403662444364,
+        "Yes": -0.07720430578419216
+      }
+    },
+    "Dependents": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": 0.02843870141773167,
+        "Yes": -0.2013770438263763
+      }
+    },
+    "PhoneService": {
+      "most_frequent": "Yes",
+      "coefs": {
+        "No": -0.10210740856102622,
+        "Yes": -0.07083093384761713
+      }
+    },
+    "MultipleLines": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": -0.20896019598992419,
+        "No phone service": -0.10210740856102622,
+        "Yes": 0.13812926214230714
+      }
+    },
+    "InternetService": {
+      "most_frequent": "Fiber optic",
+      "coefs": {
+        "DSL": -0.6194666739412147,
+        "Fiber optic": 0.7169509061763039,
+        "No": -0.2704225746437231
+      }
+    },
+    "OnlineSecurity": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": 0.2053394602147677,
+        "No internet service": -0.2704225746437231,
+        "Yes": -0.10785522797967233
+      }
+    },
+    "OnlineBackup": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": 0.0747267514392172,
+        "No internet service": -0.2704225746437231,
+        "Yes": 0.02275748079586238
+      }
+    },
+    "DeviceProtection": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": 0.016843598368540463,
+        "No internet service": -0.2704225746437231,
+        "Yes": 0.08064063386654344
+      }
+    },
+    "TechSupport": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": 0.1707353279633689,
+        "No internet service": -0.2704225746437231,
+        "Yes": -0.07325109572827354
+      }
+    },
+    "StreamingTV": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": -0.17215733387991408,
+        "No internet service": -0.2704225746437231,
+        "Yes": 0.26964156611499174
+      }
+    },
+    "StreamingMovies": {
+      "most_frequent": "No",
+      "coefs": {
+        "No": -0.18559320957151884,
+        "No internet service": -0.2704225746437231,
+        "Yes": 0.2830774418065997
+      }
+    },
+    "Contract": {
+      "most_frequent": "Month-to-month",
+      "coefs": {
+        "Month-to-month": 0.6682406902251274,
+        "One year": -0.062408703523906026,
+        "Two year": -0.7787703291098816
+      }
+    },
+    "PaperlessBilling": {
+      "most_frequent": "Yes",
+      "coefs": {
+        "No": -0.25433365466027635,
+        "Yes": 0.0813953122516293
+      }
+    },
+    "PaymentMethod": {
+      "most_frequent": "Electronic check",
+      "coefs": {
+        "Bank transfer (automatic)": -0.15581907406990383,
+        "Credit card (automatic)": -0.15758814758856327,
+        "Electronic check": 0.24430601219486153,
+        "Mailed check": -0.10383713294504388
+      }
+    },
+    "SeniorCitizen": {
+      "most_frequent": "0",
+      "coefs": {
+        "0": -0.1625748188800715,
+        "1": -0.010363523528576462
+      }
+    }
+  }
+}

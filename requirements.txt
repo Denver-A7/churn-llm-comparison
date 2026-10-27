@@ -6,3 +6,5 @@ seaborn==0.13.2
 jupyter==1.1.1
 anthropic==0.120.0
 python-dotenv==1.2.2
+streamlit==1.50.0
+plotly==6.3.0
