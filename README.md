@@ -2,7 +2,9 @@
 
 A small, reproducible study of customer churn prediction using the Telco Customer Churn dataset. It compares a trained logistic-regression baseline with Claude Haiku used zero-shot on natural-language summaries of customer records.
 
-**In short:** I compared and trained logistic regression model with Claude Haiku (given no training) on 194 telecom customers. They performed about the same (accuracy 0.742 vs. 0.773, not a meaningful gap), but they made different mistakes. The more useful part is where they disagree and whether the AI's written reasons hold up.
+**In short:** I compared a trained logistic regression model with Claude Haiku (given no training) on 194 telecom customers. They performed about the same (accuracy 0.742 vs. 0.773, not a meaningful gap), but they made different mistakes. The more useful part is where they disagree and whether the AI's written reasons hold up.
+
+**Live demo:** http://churn-llm-vs-model.streamlit.app/
 
 ## Problem statement
 
