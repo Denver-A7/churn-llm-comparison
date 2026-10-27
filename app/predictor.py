@@ -20,17 +20,37 @@ def _is_missing(value: Any) -> bool:
     return isinstance(value, str) and value.strip() == ""
 
 
-def linear_score(spec: dict, customer: dict) -> float:
-    z = spec["intercept"]
+def contributions(spec: dict, customer: dict) -> list[dict]:
+    """Per-feature additive terms of the linear score for one customer.
+
+    Each entry has ``feature``, ``label`` (feature = value as used by the model),
+    and ``contribution`` (positive pushes toward churn). The intercept is excluded.
+    """
+    rows: list[dict] = []
     for name, col in spec["numeric"].items():
         value = customer.get(name)
         x = col["median"] if _is_missing(value) else float(value)
-        z += col["coef"] * (x - col["mean"]) / col["scale"]
+        rows.append(
+            {
+                "feature": name,
+                "label": f"{name} = {x:g}",
+                "contribution": col["coef"] * (x - col["mean"]) / col["scale"],
+            }
+        )
     for name, col in spec["categorical"].items():
         value = customer.get(name)
         key = col["most_frequent"] if _is_missing(value) else str(value)
         # Unknown categories contribute nothing (handle_unknown="ignore").
-        z += col["coefs"].get(key, 0.0)
+        rows.append(
+            {"feature": name, "label": f"{name} = {key}", "contribution": col["coefs"].get(key, 0.0)}
+        )
+    return rows
+
+
+def linear_score(spec: dict, customer: dict) -> float:
+    z = spec["intercept"]
+    for row in contributions(spec, customer):
+        z += row["contribution"]
     return z
 
 

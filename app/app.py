@@ -6,7 +6,9 @@ It never reads ``data/raw`` and never calls an API.
 
 from __future__ import annotations
 
+import logging
 import sys
+from collections.abc import Callable
 from pathlib import Path
 
 import pandas as pd
@@ -18,10 +20,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import data as d  # noqa: E402
 import predictor  # noqa: E402
 
+logger = logging.getLogger(__name__)
+
 BASELINE = "Logistic regression"
 HAIKU = "Claude Haiku"
-COLORS = {BASELINE: "#4C78A8", HAIKU: "#F58518"}
+# Blue is always the trained baseline; orange is always Claude Haiku.
+COLORS = {BASELINE: "#2A78D6", HAIKU: "#EB6834"}
 NEUTRAL = "#B0B0B0"
+STAY_GRAY = "#8E959E"
+REPO_URL = "https://github.com/Denver-A7/churn-llm-comparison"
 
 st.set_page_config(page_title="Churn: trained model vs. zero-shot LLM", layout="wide")
 
@@ -53,6 +60,51 @@ def pct(x: float) -> str:
     return f"{x:.1%}"
 
 
+def render_tab(tab, render: Callable[[], None]) -> None:
+    """Draw one tab; on failure show a short message instead of a traceback."""
+    with tab:
+        try:
+            render()
+        except Exception:
+            logger.exception("Tab renderer %s failed", render.__name__)
+            st.error(
+                "This section could not be displayed. Try reloading the page. If it keeps happening, "
+                "regenerate the demo data with `python app/export_app_data.py`."
+            )
+
+
+# --------------------------------------------------------------------------- #
+# Sidebar
+# --------------------------------------------------------------------------- #
+with st.sidebar:
+    st.markdown("### About this demo")
+    st.markdown(
+        f"A trained logistic regression and Claude Haiku (zero-shot) each predicted churn for the same "
+        f"{n} telecom customers. This app reads the saved results; it never calls an API."
+    )
+    st.markdown(
+        f"<span style='color:{COLORS[BASELINE]}'>&#9632;</span> Logistic regression &nbsp; "
+        f"<span style='color:{COLORS[HAIKU]}'>&#9632;</span> Claude Haiku",
+        unsafe_allow_html=True,
+    )
+    st.markdown("### Data")
+    st.markdown(
+        "IBM Telco Customer Churn sample dataset, as published on "
+        "[Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn). "
+        "It contains no real customers."
+    )
+    st.markdown(f"[Code and write-up on GitHub]({REPO_URL})")
+    st.markdown("### Limits")
+    st.markdown(
+        f"""
+- Only {n} customers ({metrics['n_churners_compared']} churners), one run.
+- One AI model and one prompt; other models or prompts could behave differently.
+- The AI's reasons are generated text, not a record of how it decided.
+- p = {p_value:.2f} on the disagreements means the gap between the models could be chance.
+        """
+    )
+
+
 # --------------------------------------------------------------------------- #
 # Header
 # --------------------------------------------------------------------------- #
@@ -71,7 +123,7 @@ tab_overview, tab_metrics, tab_dis, tab_seg, tab_reason, tab_whatif = st.tabs(
 # --------------------------------------------------------------------------- #
 # Overview
 # --------------------------------------------------------------------------- #
-with tab_overview:
+def render_overview() -> None:
     c1, c2, c3, c4 = st.columns(4)
     c1.metric(
         "Customers compared", n,
@@ -132,7 +184,7 @@ with tab_overview:
 # --------------------------------------------------------------------------- #
 # Metrics
 # --------------------------------------------------------------------------- #
-with tab_metrics:
+def render_metrics() -> None:
     st.subheader(f"Scores on the same {n} customers")
     metric_names = ["accuracy", "precision", "recall", "f1"]
     labels = {"accuracy": "Accuracy", "precision": "Precision", "recall": "Recall", "f1": "F1"}
@@ -199,7 +251,7 @@ with tab_metrics:
 # --------------------------------------------------------------------------- #
 # Disagreements
 # --------------------------------------------------------------------------- #
-with tab_dis:
+def render_disagreements() -> None:
     st.subheader("Browse the customers")
     f1, f2, f3, f4 = st.columns([1, 1.3, 1.3, 1.3])
     only_dis = f1.toggle(f"Only the {n_dis} disagreements", value=True)
@@ -278,7 +330,7 @@ with tab_dis:
 # --------------------------------------------------------------------------- #
 # Segments
 # --------------------------------------------------------------------------- #
-with tab_seg:
+def render_segments() -> None:
     st.subheader("Where did the models disagree, and who was right there?")
     dim_labels = {"Contract": "Contract type", "tenure_bucket": "Tenure", "cost_quartile": "Monthly charge quartile"}
     dim = st.radio("Break down by", list(dim_labels), format_func=dim_labels.get, horizontal=True)
@@ -371,7 +423,7 @@ with tab_seg:
 # --------------------------------------------------------------------------- #
 # Reasoning
 # --------------------------------------------------------------------------- #
-with tab_reason:
+def render_reasoning() -> None:
     st.subheader("Do Haiku's written reasons hold up?")
     st.markdown(
         "Each Haiku prediction came with one sentence of justification. The facts it quotes are taken from the "
@@ -446,7 +498,7 @@ Five hand-picked cases illustrate patterns; they do not represent all 194 custom
 # --------------------------------------------------------------------------- #
 # What-if
 # --------------------------------------------------------------------------- #
-with tab_whatif:
+def render_whatif() -> None:
     st.subheader("What would the trained model say about a customer like this?")
     st.markdown(
         "This scores a customer you describe with the **same logistic regression** used in the study, using its "
@@ -543,7 +595,40 @@ with tab_whatif:
         "month-to-month customers to land above 50%. This is a demo of the trained baseline, not a production scoring tool."
     )
 
-    with st.expander("What drives the score"):
+    st.subheader("What is pushing this customer's score")
+    contrib = pd.DataFrame(predictor.contributions(model_spec, customer))
+    contrib = contrib[contrib["contribution"].abs() > 1e-9]
+    contrib["size"] = contrib["contribution"].abs()
+    contrib = contrib.sort_values("size", ascending=True)  # Plotly draws the last row at the top
+    contrib["direction"] = contrib["contribution"].map(lambda v: "Toward leaving" if v > 0 else "Toward staying")
+    fig = go.Figure(
+        go.Bar(
+            x=contrib["contribution"],
+            y=contrib["label"],
+            orientation="h",
+            marker_color=[COLORS[BASELINE] if v > 0 else STAY_GRAY for v in contrib["contribution"]],
+            text=contrib["contribution"].map(lambda v: f"{v:+.2f}"),
+            textposition="outside",
+            cliponaxis=False,
+            customdata=contrib["direction"],
+            hovertemplate="%{y}<br>%{x:+.3f} (%{customdata})<extra></extra>",
+        )
+    )
+    fig.add_vline(x=0, line_color="#666", line_width=1)
+    fig.update_layout(
+        height=max(360, 26 * len(contrib) + 80),
+        xaxis_title="Contribution to the score (coefficient × this customer's value)",
+        yaxis_title=None,
+        margin={"l": 10, "r": 60, "t": 20, "b": 50},
+    )
+    st.plotly_chart(fig)
+    st.caption(
+        f"Blue bars push toward *leaves*, gray bars toward *stays*. Numeric features are standardized first, so the "
+        f"bar reflects how unusual this customer's value is. The model's intercept ({model_spec['intercept']:+.2f}) "
+        f"is not shown."
+    )
+
+    with st.expander("All coefficients"):
         st.markdown(
             "Coefficients on standardized numeric features and one-hot categories. Positive pushes toward "
             "*leaves*, negative toward *stays*."
@@ -560,4 +645,15 @@ with tab_whatif:
             coef_df, hide_index=True, width="stretch", height=380,
             column_config={"Coefficient": st.column_config.NumberColumn(format="%.3f")},
         )
+
+
+# --------------------------------------------------------------------------- #
+# Draw the tabs
+# --------------------------------------------------------------------------- #
+render_tab(tab_overview, render_overview)
+render_tab(tab_metrics, render_metrics)
+render_tab(tab_dis, render_disagreements)
+render_tab(tab_seg, render_segments)
+render_tab(tab_reason, render_reasoning)
+render_tab(tab_whatif, render_whatif)
 

@@ -1,0 +1,9 @@
+# Theme for the churn demo. Only the accent color is set, in both the light and
+# dark tables, so the app keeps following the visitor's light/dark preference.
+# (Streamlit >= 1.51 reads script-level .streamlit/config.toml next to app.py.)
+
+[theme.light]
+primaryColor = "#2A78D6"
+
+[theme.dark]
+primaryColor = "#2A78D6"
